@@ -4,7 +4,6 @@ on:
   push:
     branches: [master]
 
-concurrency: master-codecov-report
 
 jobs:
   report-coverage:
@@ -29,7 +28,6 @@ jobs:
           directory: ./packages/core
 
       - name: Codecov UI
-        uses: codecov/codecov-action@v3
         with:
           flags: ui
           directory: ./packages/ui
